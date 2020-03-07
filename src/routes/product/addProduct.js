@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const product = require("../../controllers/product");
 
-router.post("/add", async (req, res) => {
-  await res.status(200).json("successful");
-});
+router.post("/add", product.addProduct);
 
 module.exports = router;
